@@ -114,10 +114,29 @@ An overview of these research topics is available in the survey book~\cite{Tamar
 One way to see that it is a lattice is to see it as a lattice quotient of the weak order~\cite{Reading-cambrianLattices, ChatelPilaud}.
 
 \begin{figure}[h]
-	\centerline{\includegraphics[scale=.55]{weakOrder}\qquad\includegraphics[scale=.45]{TamariLattice}\qquad\includegraphics[scale=.7]{booleanLattice}}
-	\caption{The weak order (left), the Tamari lattice (middle) and the boolean lattice (right).}
-	\label{fig:classicalLattices}
+%\input{objectIntroTable}
+\begin{tabular}{l|c|c|c}
+	& permutations & binary trees & binary sequences \\
+	\hline
+	& Weak order & Tamari lattice & boolean lattice \\
+	\rotatebox{90}{\hspace*{.1cm} Combinatorics} &  \includegraphics[scale=.3]{weakOrder} & \includegraphics[scale=.23]{TamariLattice} & \includegraphics[scale=.35]{/booleanLattice} \\
+	& \cite{LascouxSchutzenberger} & \cite{TamariFestschrift} & \\
+	\hline
+	& Permutahedron & Associahedron & Cube \\
+	\rotatebox{90}{\hspace*{.5cm} Geometry} & \includegraphics[scale=.4]{permutahedron} & \includegraphics[scale=.3]{associahedronLoday} & \includegraphics[scale=.35]{figures/parallelepiped.pdf} \\
+	& \cite[Lecture~0]{Ziegler} & \cite{Loday, HohlwegLange} &  \\
+	\hline
+	\rotatebox{90}{\hspace*{-.8cm} Algebra \;} & Malvenuto-Reutenauer & Loday-Ronco  & Descent Hopf algebra \\
+    & algebra~\cite{MalvenutoReutenauer, DuchampHivertThibon} & algebra~\cite{LodayRonco, HivertNovelliThibon-algebraBinarySearchTrees} & \cite{GelfandKrobLascouxLeclercRetakhThibon} \\
+    & & & \\
+\hline
+\end{tabular}
+\vspace{-.2cm}
+\caption{Summary of lattice structures, polytopes, and Hopf algebras on 3 families of combinatorial objects}
+\label{fig:classicalLattices}
 \end{figure}
+
+The boolean lattice is a sublattice of the Tamari lattice, itself a sublattice of the weak order. Similar patterns appear in their geometric and algebraic aspects. Indeed, the associahedron~\cite{Loday,HohlwegLange} is a polytope whose skeleton gives the Hasse diagram of the Tamari lattice. It can be obtained from the permutahedron, whose vertices are the permutations and whose skeleton gives the weak order, by removing some facets. By removing even more facets, one obtains a cube. Algebraically, one can define structures known as \emph{Hopf Algebras} (vector spaces with a compatible product and co-product operations) whose basis are respectively permutations~\cite{MalvenutoReutenauer, DuchampHivertThibon}, binary trees~\cite{LodayRonco, HivertNovelliThibon-algebraBinarySearchTrees}, and binary words~\cite{GelfandKrobLascouxLeclercRetakhThibon}. The algebra on binary words is a sub Hopf algebra of the one on binary trees, itself a sub Hopf algebra of the one on permutations.
 
 \begin{figure}[h]
 	\centerline{\includegraphics[scale=.5]{permutreeLattices}}
@@ -131,13 +150,19 @@ Permutrees should be consider as hybrid combinatorial objects between permutatio
 There is also a natural rotation operation on $\delta$-permutrees, with a natural orientation, and the transitive closure of this operation defines a lattice on $\delta$-permutrees called \defn{permutree lattice} and denoted~$\cL(\delta)$.
 See Fig.~\ref{fig:permutreeLattices}.
 For example, the weak order on permutations is the permutree lattice~$\cL(\noneCirc^n)$, the Tamari lattice is the permutree lattice~$\cL(\downCirc^n)$, and the boolean lattice is the permutree lattice~$\cL(\upDownCirc^n)$.
-The permutree lattice is always a lattice quotient of the weak order on permutations.
-
-\viviane{Add something about polytopes and Hopf algebras}
+The permutree lattice is always a lattice quotient and a sublattice of the weak order on permutations. Besides, the permutrees also generalize the geometric and algebraic structures. Each permutree lattice gives a certain Permutreehedron polytope whose skeleton is the Hasse diagram of the lattice. The different permutreehedrons are contained into each other is a way that reflects the sublattices relations between permutree lattices and generalizes the permutahedron-associahedron-cube pattern. Agebraically, we can define a permutree Hopf algebra whose basis is given by the permutrees.
 
 \subsection{Specific context of the thesis}
 
-As previously described, we have two families of interesting structures, the Cambrian lattices and the Permutree lattices, both generalizing the Tamari lattice. They overlap in the sense that the Cambrian lattices of type $A$ are a specific case of Permutree lattices. They correspond to a decoration $\delta \in \lbrace \upCirc, \downCirc \rbrace^n$. The problem of defining Permutree lattices for other types has never been studied and raises many interesting questions:
+As previously described, we have two families of interesting structures, the Cambrian lattices and the Permutree lattices, both generalizing the Tamari lattice. They overlap in the sense that the Cambrian lattices of type $A$ are a specific case of Permutree lattices. They correspond to a decoration $\delta \in \lbrace \upCirc, \downCirc \rbrace^n$. The problem of defining Permutree lattices for other types has never been studied.
+
+More generally, the topic of the Tamari lattice and its generalizations has been very active in the past years, with algebraic, combinatorial and geometrical aspects on top of connections with other areas of mathematics and computer science. See for example the work of Bergeron and Préville-Ratelle on harmonic polynomials which led to the definition of the $m$-Tamari lattices~\cite{BergmTamari}, the more recent generalization to $\nu$-Tamari lattices and its geometrical realizations~\cite{RatelleViennot, mTamGeom}, and the enumeration of intervals in relation to maps~\cite{BijTriangulations, FangPrevilleRatelle} among many others. All three advisers of the present project have shown their expertise on the subject through their recent work~\cite{HivertNovelliThibon-algebraBinarySearchTrees, LangePilaud, ChatelPilaud, ChatelPons, PilaudPons-permutrees, ChatelPilaudPons, CeballosPonsFPSAC}. 
+
+\section{Objectives, method and expected results}
+
+\subsection{Objectives}
+
+The goal of this thesis is to understand the relation between the Permutree lattices and the finite Coxeter groups, more specifically, we will study the following questions:
 
 \begin{compactitem}
 \item Each permutree can be injectively sent to a couple of permutations. In type $A$, these permutations can be characterized through pattern avoidance. Can we also characterize them by conditions on their reduced words as elements of the type $A$ Coxeter group? 
@@ -148,11 +173,7 @@ As previously described, we have two families of interesting structures, the Cam
 \end{compactitem}
 
 We have good reasons to believe that some of these questions have positive answers and lead to very interesting research and results. 
-\viviane{Add a word about it being a trending topic, cite other stuff on the Tamari lattice}
 
-\section{Objectives, method and expected results}
-
-\subsection{Objectives}
 
 \subsection{Method}
 
@@ -198,7 +219,18 @@ Finally, Viviane Pons and Vincent Pilaud have a strong connection to Colombia. V
 
 \subsection{Possible collaboration}
 
+\begin{compactitem}
+\item University of Vienna, Austria (C. Ceballos)
+\item UQAM Montréal, Canada (F. Bergeron, F. Saliola, C. Reutenauer)
+\item York University, Toronto, Otario Canada (N. Bergeron, M. Zabrocki)
+\item University of Minnesota USA (V. Reiner)
+\item Université de Strasbourg (F. Chapoton)
+\item Université de Marne la Vallée (J.-C. Novelli et J.-Y. Thibon)
+\end{compactitem}
+
 \subsection{Valorization objectives}
+
+Valorization will be done through peer-reviewed publications in international journals and conferences (JCTA, ALCO, EJC, FPSAC, EuroComb), contribution to the SageMath software, and participation to national and international workshops and conferences.
 
 \section{Candidate profile}
 
