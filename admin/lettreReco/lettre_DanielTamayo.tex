@@ -1,0 +1,203 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Professional Formal Letter
+% LaTeX Template
+% Version 1.0 (28/12/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Brian Moses (http://www.ms.uky.edu/~math/Resources/Templates/LaTeX/)
+% with extensive modifications by Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,a4paper]{letter} % Specify the font size (10pt, 11pt and 12pt) and paper size (letterpaper, a4paper, etc)
+
+\usepackage{graphicx} % Required for including pictures
+\usepackage{microtype} % Improves typography
+\usepackage[T1]{fontenc} % Required for accented characters
+\usepackage[frenchb]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[hyperindex = true, frenchlinks = true,
+colorlinks = true, citecolor = NavyBlue, linkcolor = blue, urlcolor = blue, linktocpage]{hyperref}
+
+% Create a new command for the horizontal rule in the document which allows thickness specification
+\makeatletter
+\def\vhrulefill#1{\leavevmode\leaders\hrule\@height#1\hfill \kern\z@}
+\makeatother
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT MARGINS
+%----------------------------------------------------------------------------------------
+
+\textwidth 6.75in
+\textheight 9.25in
+\oddsidemargin -.25in
+\evensidemargin -.25in
+\topmargin -1in
+\longindentation 0.50\textwidth
+\parindent 0.4in
+
+%----------------------------------------------------------------------------------------
+%	SENDER INFORMATION
+%----------------------------------------------------------------------------------------
+
+\def\Whoa{Florent Hivert} % Your name
+\def\Whata{, Professeur des Universités} % Your title
+\def\Whob{Viviane Pons} % Your name
+\def\Whatb{, Maîtresse de Conférences} % Your title
+\def\Whoc{Vincent Pilaud}
+\def\Whatc{, Charché de Recherche CNRS}
+\def\Wherea{Laboratoire de Recherche en Informatique} % Your department/institution
+\def\Addressa{Université Paris-Sud} % Your address
+\def\CityZipa{Orsay} % Your city, zip code, country, etc
+\def\Whereb{Laboratoire d'informatique (LIX) } % Your department/institution
+\def\Addressb{École polytechnique} % Your address
+\def\CityZipb{Palaiseau} % Your city, zip code, country, etc
+\def\Emaila{florent.hivert@lri.fr} % Your email address
+\def\Emailb{viviane.pons@lri.fr} % Your email address
+\def\Emailc{pilaud@lix.polytechnique.fr}
+\def\URLb{\url{http://www.lri.fr/~pons}} % Your URL
+\def\URLa{\url{https://www.lri.fr/~hivert/}} % Your URL
+\def\URLc{\url{http://www.lix.polytechnique.fr/Labo/Vincent.Pilaud/}}
+
+%----------------------------------------------------------------------------------------
+%	HEADER AND FROM ADDRESS STRUCTURE
+%----------------------------------------------------------------------------------------
+
+\address{
+\includegraphics[width=1in]{logo-psud-saclay.jpg} % Include the logo of your institution
+\hspace{5.1in} % Position of the institution logo, increase to move left, decrease to move right
+\vskip -1.07in~\\ % Position of the text in relation to the institution logo, increase to move down, decrease to move up
+\Large\hspace{1.5in} \hfill ~\\[0.05in] % First line of institution name, adjust hspace if your logo is wide
+\hfill \normalsize % Second line of institution name, adjust hspace if your logo is wide
+\makebox[0ex][r]{\bf \Whob \Whatb} % Print your name and title with a little whitespace to the right
+\\
+\hfill \normalsize % Second line of institution name, adjust hspace if your logo is wide
+ \makebox[0ex][r]{\bf \Whoc \Whatc} % Print your name and title with a little whitespace to the right
+\\
+\hfill \normalsize % Second line of institution name, adjust hspace if your logo is wide
+ \makebox[0ex][r]{\bf \Whoa \Whata} % Print your name and title with a little whitespace to the right
+\\[-0.11in] % Reduce the whitespace above the horizontal rule
+\hspace{1.5in}\vhrulefill{1pt} \\ % Horizontal rule, adjust hspace if your logo is wide and \vhrulefill for the thickness of the rule
+\hspace{\fill}\parbox[t]{2in}{ % Create a box for your details underneath the horizontal rule on the right
+\footnotesize % Use a smaller font size for the details
+\Whob  \\ \em % Your name, all text after this will be italicized
+\Emailb\\ % Your email address
+\URLb % Your URL
+}
+\parbox[t]{2in}{ % Create a box for your details underneath the horizontal rule on the right
+\footnotesize % Use a smaller font size for the details
+\Whoa  \\ \em % Your name, all text after this will be italicized
+\Emaila\\ % Your email address
+\URLa % Your URL
+}
+\parbox[t]{2in}{ % Create a box for your details underneath the horizontal rule on the right
+\footnotesize % Use a smaller font size for the details
+\Whoc  \\ \em % Your name, all text after this will be italicized
+\Emailc\\ % Your email address
+\URLc % Your URL
+}
+\\
+\vspace{0.1in}
+\hspace{\fill}
+\parbox[t]{4in}{ % Create a box for your details underneath the horizontal rule on the right
+\footnotesize % Use a smaller font size for the details
+\em
+\Wherea\\ % Your department
+\Addressa, \CityZipa % Your address \\ % Your city and zip code
+}
+\parbox[t]{2in}{ % Create a box for your details underneath the horizontal rule on the right
+\footnotesize % Use a smaller font size for the details
+\em
+\Whereb\\ % Your department
+\Addressb, \CityZipb % Your address \\ % Your city and zip code
+}
+\vspace{-.5in} % Move the letter content up for a more compact look
+}
+
+
+
+%----------------------------------------------------------------------------------------
+%	TO ADDRESS STRUCTURE
+%----------------------------------------------------------------------------------------
+
+\def\opening#1{\thispagestyle{empty}
+{\centering\fromaddress \vspace{1in} \\ % Print the header and from address here, add whitespace to move date down
+\today\hspace*{\fill}\par} % Print today's date, remove \today to not display it
+{\raggedright \toname \\ \toaddress \par} % Print the to name and address
+\vspace{0.4in} % White space after the to address
+\noindent #1 % Print the opening line
+% Uncomment the 4 lines below to print a footnote with custom text
+%\def\thefootnote{}
+%\def\footnoterule{\hrule}
+%\footnotetext{\hspace*{\fill}{\footnotesize\em Footnote text}}
+%\def\thefootnote{\arabic{footnote}}
+}
+
+%----------------------------------------------------------------------------------------
+%	SIGNATURE STRUCTURE
+%----------------------------------------------------------------------------------------
+
+\signature{\Whob \Whatb~ -- \Whoc \Whatc~ -- \Whoa \Whata} % The signature is a combination of your name and title
+
+\long\def\closing#1{
+\vspace{0.1in} % Some whitespace after the letter content and before the signature
+\noindent % Stop paragraph indentation
+\hspace*{\fill} % Move the signature right
+\parbox{6in}{\raggedright
+#1 % Print the signature text
+\vskip 0.65in % Whitespace between the signature text and your name
+\fromsig
+\vskip 0.25in
+%\qquad\includegraphics[width=2in]{signHivert.pdf}\hspace{3cm}
+%\includegraphics[width=1in]{sgnV.jpg}
+}} % Print your name and title
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TO ADDRESS
+%----------------------------------------------------------------------------------------
+
+\begin{letter}
+{
+}
+
+%----------------------------------------------------------------------------------------
+%	LETTER CONTENT
+%----------------------------------------------------------------------------------------
+
+\opening{Objet: Lettre de recommandation de Daniel Tamayo\\[.5cm]
+  Chères et chers collègues,}
+
+nous proposons aujourd'hui un sujet de thèse sur lequel Daniel Tamayo est candidat. Ce sujet se situe dans
+la continuité du stage de Master~2 que Daniel Tamayo a réalisé entre janvier et avril 2019 sous la direction conjointe de Viviane Pons et Vincent Pilaud.
+\bigskip
+
+Viviane Pons et Vincent Pilaud ont connu Daniel Tamayo lors de l'école d'été de combinatoire ``Encuentro Colombiano de Combinatoria'' (ECCO) 2018 à Barranquilla (Colombie). Cette école de grande qualité est organisée tous les deux ans et a été financée en 2018 et 2016 par l'organisme CIMPA. Elle réunit des étudiants internationaux allant de la licence au post-doctorat pour suivre des cours avancés de combinatoire donnés par des chercheurs mondialement reconnus. Ainsi en 2018, les chercheurs invités étaient Vic Reiner  (University of Minnesota), Rekha Thomas (University of Washington), Lauren Williams (University of California Berkeley), et Günter Ziegler (Freie Universität Berlin). Vincent Pilaud était l'un des organisateur et Viviane Pons était chercheuse invitée, responsable des sessions tutorées logiciel sous SageMath. L'organisation de l'école favorise une grande interaction entre les chercheurs et les étudiants en alternant les séances plénières de cours et exposés avec des séances d'exercices en petits groupes. C'est lors de ces séances que nous avons eu l'occasion de travailler avec Daniel Tamayo et que nous avons remarqué son intelligence, sa rapidité et son inventivité dans la résolution de problèmes. C'est très naturellement qu'à la suite de ce séjour, nous lui avons proposé de venir effectuer un stage sous notre direction.
+
+Ce stage s'est déroulé entre janvier et avril 2019. Le sujet portait sur le treillis des Permutarbres introduit dans un récent article par Viviane Pons et Vincent Pilaud. Nous posions une question ouverte : comment adapter la notion des vecteurs de parenthésages connue pour les treillis de Tamari à la généralisation que sont les treillis de Permutarbres ? Cette question est liée à une généralisation de la rotation des arbres binaires, très classique en algorithmique (arbres binaires de recherche, AVL, etc.) Le stage a été un succès aussi bien du point de vue scientifique que de l'intégration dans l'équipe de recherche. Daniel Tamayo a apprécié son séjour au sein du LRI et du LIX, a participé systématiquement au séminaire joint de combinatoire que nous organisons ainsi qu'à plusieurs autres séminaires parisiens et a pu partir une semaine au CIRM pour profiter de la conférence ``Calcul Mathématique Libre'' et ainsi consolider ses connaissances en programmation et logiciels mathématiques. D'un point de vue scientifique, il a, dans un temps relativement court (3 mois), assimilé de nombreuses nouvelles notions (treillis de Tamari, ordre faible sur les permutations, vecteurs de parenthséages, Permutarbres) en lisant les articles que nous lui avions recommandé. Il a su comprendre et combiner ces notions pour nous proposer des idées originales issues de ses recherches personnelles. Ainsi, il a pu répondre à la question posée et définir une nouvelle notion combinatoire autours des permutarbres. De retour en Colombie, il travaille actuellement à la rédaction d'un article de recherche pour publier ses résultats. Cet article devrait être signé uniquement de son nom : nous considérons en effet que notre rôle n'a été que de guider et de conseiller et que l'ensemble de la recherche et des idées sont venues de lui.
+
+Le sujet de thèse que nous proposons se situe dans la continuité des recherches effectuées pendant le stage. La notion de Permutarbres reste centrale et nous étendons le domaine de recherche aux groupes de Coxter et treillis cambriens. Nous n'avons aucun doute quant à la capacité de Daniel Tamayo à s'approprier rapidement les nouvelles notions et à parvenir à de nouveaux résultats. Non seulement nous pensons qu'il saura répondre à certaines des questions ouvertes que nous posons, mais aussi que sa curiosité scientifique le poussera à définir ses propres axes de recherche en fonction de son expérience de recherche passée et de ses connaissances fondamentales très solides. Daniel Tamayo termine actuellement son Master à l'université de Los Andes (Bogota, Colombie) sous la direction de Carolina Benedetti. Nous avons pu observer la grande qualité de l'enseignement de cette université lors de nos séjours à ECCO en 2016 et 2018 où nous avons rencontré de nombreux étudiants brillants. D'ailleurs, de nombreux chercheurs en combinatoire ont fait leurs études à Los Andes avant d'effectuer des carrières internationales. C'est le cas par exemple de Cesar Ceballos (Univ. de Vienne) avec qui nous avons plusieurs collaborations en cours. C'est aussi le cas de Carolina Benetti qui a fait sa thèse à l'université de York (Ontario, Canada) sous la direction de Nantel Bergeron avec qui nous collaborons. Nous entretenons donc déjà des liens de recherche forts avec l'université de Los Andes en particulier et la communauté scientifique colombienne en général, ce qui facilitera l'intégration de Daniel Tamayo au sein de notre équipe. Par ailleurs, nous espérons ainsi contribuer au rayonnement international de l'école doctorale de Paris-Saclay. 
+
+Pour toutes ces raisons, nous soutenons sans réserve la candidature de Daniel Tamayo. Nous pensons qu'il a toutes les qualités nécessaires pour devenir un excellent étudiant de doctorat et sera un véritable atout pour notre équipe de recherche.
+
+ 
+
+\closing{Très cordialement,}
+
+%----------------------------------------------------------------------------------------
+
+\end{letter}
+\end{document}
