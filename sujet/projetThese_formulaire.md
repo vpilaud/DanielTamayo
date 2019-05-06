@@ -72,8 +72,11 @@ lead to very interesting research and results.
 
 ## contexte *
 
+When studying combinatorial objects, it is common to define a partial order sturcture on its elements. This structure is motivated by algebraic as well as algorithmic questions. A classical example is the weak order on permutations based on the bubble sort algorithm. A permutation is smaller than another one if it can be obtained by a partial application of the bubble sort. Another example is the Tamari lattice on binary trees, where the cover relations is the classical rotation of binary trees used in algorithmic in the AVL sort. These structures have long been related to difficult questions in algorithmic and complexity theory. A classical example is the
+diameter of the associahedron studied by Sleator, Tarjan, and Thurston [STT86] and later on by Pournin [Pou14].
+
 As previously described, we have two families of interesting structures, the Permutree lattices and the Cambrian lattices, both generalizing the Tamari lattice. They overlap in the sense that the Cambrian lattices of type A are a specific case of Permutree lattices. The problem of defining Permutree lattices for other types has never
-been studied.
+been studied. (See the attached PDF for more background on Permutrees and Cambrian lattices).
 
 More generally, the topic of the Tamari lattice and its generalizations has been very active in the past years, with algebraic, combinatorial and geometrical aspects on top of connections with other areas of mathematics and computer science. See for example the work of Bergeron and Préville-Ratelle on harmonic polynomials which led to the definition of the m-Tamari lattices [BPR12], the more recent generalization to ν-Tamari lattices and its geometrical realizations [PX15, CPS16], and the enumeration of intervals in relation to maps [BB09, FPR17] among many others. All three advisers of the present project have shown their expertise on the subject through their recent work [HNT05, LP18, CP17, CP15, PP18, CPP19, CP19].
 
@@ -154,6 +157,8 @@ etc.);
 
 [MR95] Claudia Malvenuto and Christophe Reutenauer. Duality between quasi-symmetric functions and the Solomon descent algebra. J. Algebra, 177(3):967–982, 1995.
 
+[Pou14] L. Pournin. The diameter of associahedra. Adv. Math., 259:13–42, 2014.
+
 [PP18] Vincent Pilaud and Viviane Pons. Permutrees. Algebraic Combinatorics, 1(2):173–224,2018.
 
 [PX15] L.-F. Préville-Ratelle and Viennot X. An extension of Tamari lattices. DMTCS Proceedings, 27th International Conference on Formal Power Series and Algebraic Combinatorics, 0(01), 2015.
@@ -161,6 +166,8 @@ etc.);
 [Rea06] Nathan Reading. Cambrian lattices. Adv. Math., 205(2):313–353, 2006.
 
 [Rea16] N. Reading. Finite Coxeter groups and the weak order. In Lattice theory: special topics and applications. Vol. 2, pages 489–561. Birkhäuser/Springer, Cham, 2016.
+
+[STT86] D D Sleator, R E Tarjan, and W P Thurston. Rotation distance, triangulations, and hyperbolic geometry. In Proceedings of the Eighteenth Annual ACM Symposium on Theory of Computing, STOC ’86, pages 122–135, New York, NY, USA, 1986. ACM.
 
 [Tam51] Dov Tamari. Monoides préordonnés et chaînes de Malcev. PhD thesis, Université Paris Sorbonne, 1951.
 
