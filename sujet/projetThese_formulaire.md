@@ -18,6 +18,8 @@ Combinatoire algébrique, Géométrie discrète, Ordre partiel, Polytope, Arbres
 
 ## Titre en Anglais 
 
+Combinatorics, Algebra, and Geometry from Cambrian to Permutree lattices
+
 
 ## keywords
 
